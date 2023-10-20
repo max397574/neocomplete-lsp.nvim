@@ -73,7 +73,7 @@ function source.keyword_pattern() end
 function source.get_trigger_characters() end
 
 function source.complete(self, params, callback)
-    local lsp_params = vim.lsp.util.make_position_params(0, self.client.offset_encoding)
+    local lsp_params = vim.lsp.util.make_position_params(0)
     lsp_params.context = {}
     lsp_params.context.triggerKind = params.completion_context.triggerKind
     lsp_params.context.triggerCharacter = params.completion_context.triggerCharacter
